@@ -196,6 +196,19 @@ class CompareWindow(pg.GraphicsLayoutWidget):
           
 def compare_images(image_list, image_names = None, view_names = None):
     
+    '''
+    Takes images, images names, and 'view' names.
+        Arguments:
+            image_list (list): A list containing 2D numpy arrays or sublists of 2d numpy arrays when providing more than one 'view'
+            image_names (list, OPTIONAL): List of image names, length the same as image_list
+            view_names (list, OPTIONAL): list of view names. If there is more than one view per image, list should contain sublists for each image equal in length to the number or views. 
+        Returns:
+            results (dict): 
+                            'names' : List of image names
+                            'points' : List of matching points from each image
+                            'point_high_conf' : Whether the feature match at the selected point is of high confidence
+    '''
+    
     app = pg.mkQApp()
     app.setQuitOnLastWindowClosed(True)    
         
