@@ -1,4 +1,4 @@
-# Key-point-finder
+# key-point-finder
 
 A GUI for finding the key points of matching features between two images
 
